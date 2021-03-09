@@ -1,0 +1,101 @@
+/*
+//  >= 576px
+@media (min-width: 576px) {
+}
+// >= 768px
+@media (min-width: 768px) {
+}
+//  >= 992px
+@media (min-width: 992px) {
+}
+//  >= 1200px
+@media (min-width: 1200px) {
+}
+*/
+
+@import "mixins";
+@import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  &::-webkit-scrollbar {
+    height: 0px;
+    width: 0px;
+  }
+}
+body {
+  font-family: $font_family_text;
+  // background: #222222;
+  overflow: hidden;
+  color: #fff;
+  margin: 0;
+  width: 100vw;
+  // background-color: tomato;
+}
+p {
+  color: $main_text_color;
+  transition: $main_transition;
+}
+
+a {
+  &:hover,
+  :focus {
+    text-decoration: none;
+    outline: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: fit-content;
+  background-color: #222;
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 1;
+  top: -100vh;
+  left: -100vw;
+  width: 300vw;
+  height: 300vh;
+  cursor: grab;
+  background-color: #222;
+}
+.container {
+  position: relative;
+  width: fit-content;
+  // height: 100%;
+  z-index: -1;
+  // background-color: blue;
+}
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  border: 10px solid aquamarine;
+}
+
+// //////////////////////////////////////////////
+canvas {
+  background-color: #222;
+  // width: 100vw;
+  // height: 100vh;
+}
+
+@import "fonts";
+@import "global-classes";
+
+//------------------------- Импорт страниц
+@import "pages/home-page";

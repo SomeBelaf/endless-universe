@@ -1,0 +1,23 @@
+@mixin svg-icon($w, $h) {
+  //viewBox="0 0 32 32"
+  display: inline-block;
+  width: ($w/10) * 1rem;
+  height: ($h/10) * 1rem;
+}
+
+@mixin fontConnect($font_name, $file_path, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../assets/fonts/#{$file_path}.woff") format("woff"),
+      url("../assets/fonts/#{$file_path}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@mixin font($ff, $fw, $fs) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-style: $fs;
+}

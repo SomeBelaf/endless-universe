@@ -1,0 +1,102 @@
+/*
+//  >= 576px
+@media (min-width: 576px) {
+}
+// >= 768px
+@media (min-width: 768px) {
+}
+//  >= 992px
+@media (min-width: 992px) {
+}
+//  >= 1200px
+@media (min-width: 1200px) {
+}
+*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+  height: 0px;
+  width: 0px;
+}
+
+body {
+  font-family: "TT Travels", sans-serif;
+  overflow: hidden;
+  color: #fff;
+  margin: 0;
+  width: 100vw;
+}
+
+p {
+  color: #000;
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+a:hover,
+a :focus {
+  text-decoration: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #222;
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 1;
+  top: -100vh;
+  left: -100vw;
+  width: 300vw;
+  height: 300vh;
+  cursor: -webkit-grab;
+  cursor: grab;
+  background-color: #222;
+}
+
+.container {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  z-index: -1;
+}
+
+.test {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  border: 10px solid aquamarine;
+}
+
+canvas {
+  background-color: #222;
+}
+
+/*Styles for page HOME*/
