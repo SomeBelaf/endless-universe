@@ -52,46 +52,24 @@ a {
 img {
   max-width: 100%;
 }
+
+/* Styling for Infinite Drag elements */
+.wrapper {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  cursor: grab;
+  background-color: #222;
+}
 .element {
   position: absolute;
   top: 0;
   left: 0;
-  width: fit-content;
-  background-color: #222;
-}
-
-.wrapper {
-  position: absolute;
   z-index: 1;
-  top: -100vh;
-  left: -100vw;
-  width: 300vw;
-  height: 300vh;
-  cursor: grab;
-  background-color: #222;
-}
-.container {
-  position: relative;
   width: fit-content;
-  // height: 100%;
-  z-index: -1;
-  // background-color: blue;
-}
-.test {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 100vh;
-  border: 10px solid aquamarine;
-}
-
-// //////////////////////////////////////////////
-canvas {
   background-color: #222;
-  // width: 100vw;
-  // height: 100vh;
 }
 
 @import "fonts";

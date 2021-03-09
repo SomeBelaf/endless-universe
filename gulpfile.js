@@ -141,41 +141,41 @@ gulp.task("html", function () {
 
 /*Перевод scss в css*/
 gulp.task("scss", function () {
-  return gulp
-    .src(path.watch.scss) //поик файлов
-    .pipe(plumber()) //обработка ошибок
-    .pipe(sass().on("error", sass.logError)) //вывод ошибок
-    .pipe(
-      gulpIf(
-        isDevelopment,
-        sass({ outputStyle: "compressed" }),
-        sass({ outputStyle: "expanded" })
+  return (
+    gulp
+      .src(path.watch.scss) //поик файлов
+      .pipe(plumber()) //обработка ошибок
+      .pipe(sass().on("error", sass.logError)) //вывод ошибок
+      .pipe(
+        gulpIf(
+          isDevelopment,
+          sass({ outputStyle: "compressed" }),
+          sass({ outputStyle: "expanded" })
+        )
+      ) //минимизазия файла
+      .pipe(
+        autoprefixer({
+          browsers: ["last 8 versions"],
+          cascade: false,
+          grid: true,
+        })
       )
-    ) //минимизазия файла
-    .pipe(
-      autoprefixer({
-        browsers: ["last 8 versions"],
-        cascade: false,
-        grid: true,
-      })
-    )
-    .pipe(concat("style.css")) //конкатинация всех найдених файлов
-    // .pipe(
-    //   uncss({
-    //     html: ["index.html", path.watch.html],
-    //   })
-    // )
-    .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest(path.build.css)) //перенос файлов в папку
-    .pipe(reload({ stream: true }));
+      .pipe(concat("style.css")) //конкатинация всех найдених файлов
+      // .pipe(
+      //   uncss({
+      //     html: ["index.html", path.watch.html],
+      //   })
+      // )
+      .pipe(rename({ suffix: ".min" }))
+      .pipe(gulp.dest(path.build.css)) //перенос файлов в папку
+      .pipe(reload({ stream: true }))
+  );
 });
 
 /*Сборка всех файлов css в один */
 gulp.task("cssLibs", function () {
   return gulp
-    .src([
-      "node_modules/normalize.css/normalize.css",
-    ]) //поик файлов
+    .src(["node_modules/normalize.css/normalize.css"]) //поик файлов
     .pipe(plumber()) //обработка ошибок
     .pipe(sass({ outputStyle: "compressed" })) //минимизазия файлов
     .pipe(concat("libs.css")) //конкатинация всех найдених файлов

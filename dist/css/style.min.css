@@ -53,49 +53,26 @@ img {
   max-width: 100%;
 }
 
-.element {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  background-color: #222;
-}
-
+/* Styling for Infinite Drag elements */
 .wrapper {
-  position: absolute;
-  z-index: 1;
-  top: -100vh;
-  left: -100vw;
-  width: 300vw;
-  height: 300vh;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
   cursor: -webkit-grab;
   cursor: grab;
   background-color: #222;
 }
 
-.container {
-  position: relative;
+.element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  z-index: -1;
-}
-
-.test {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 100vh;
-  border: 10px solid aquamarine;
-}
-
-canvas {
   background-color: #222;
 }
 
