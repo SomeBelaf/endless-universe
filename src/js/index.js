@@ -696,7 +696,7 @@ const elements = {
     " .' .--.   ",
     "*  * _     ",
     "*._:##:.-. ",
-    "   ':##   *",
+    "   ':##    ",
     "       *  *",
     "   '--* .' ",
   ],
@@ -900,147 +900,20 @@ const elements = {
   //   ".xc'llccc::col;.                        ",
   //   " ,olccccclc;.                           ",
   //   "  .';:;,.                               ",
-  // ],
+  // ]
 };
+// --- Create Object.entries For IE11: --- //
+if (!Object.entries)
+  Object.entries = function (obj) {
+    var ownProps = Object.keys(obj),
+      i = ownProps.length,
+      resArray = new Array(i); // preallocate the Array
+    while (i--) resArray[i] = [ownProps[i], obj[ownProps[i]]];
 
-const planet_1 = [
-  "       +                                ",
-  "                                         ",
-  "                 *       +               ",
-  "           '                  |          ",
-  '       ()    .-.,="``"=.    - o -        ',
-  "             '=/_       &#92     |       ",
-  "          *   |  '=._    |               ",
-  "               &#92     `=./`,        '  ",
-  "            .   '=.__.=' `='      *      ",
-  "   +                         +           ",
-  "        O      *        '       .        ",
-];
-const planet_2 = [
-  "   °           .          .--.   .   .  ",
-  "                     ____'#   '____     ",
-  "     .              '=============='  + ",
-  "             .         . '.__.'  .   .  ",
-];
-const planet_3 = [
-  "   *            .======.                ",
-  "    .         .=\\_   _/~=.   *         ",
-  "              =~~~\\_/~~~~=      .      ",
-  "        .    |:~~~~~~_/\\_:|       .    ",
-  " +            =_/\\_ |_   =             ",
-  "              '=   \\~~\\_='   .     °  ",
-  "          .     '======'                ",
-];
-const planet_4 = [
-  "     ______     °           .          ",
-  "  .=~~~~~~~~=.                         ",
-  " .===()=======.     .            °     ",
-  " =~~~~~~~~~~~~=                    .   ",
-  " ==============                        ",
-  " '=~~~~~~~~~~='           *            ",
-  "   '-.____.-'    .     +          .    ",
-];
-const planet_5 = [
-  "  .#******#.    .      +             .   ",
-  ".##~~~~~~~~##.                           ",
-  "##~~~~~~~~~~##                           ",
-  "#~~~~~~~~~~~~#                           ",
-  "##~~~~~~~~~~##       °                 * ",
-  "'##~~~~~~~~##'                  +        ",
-  "  '########' *            *            * ",
-];
-const planet_6 = [
-  "     *   .           .     .#****#.  * ",
-  "                         .##~~~~~~##.  ",
-  "       .    *      *     #~~~~~~~~~~#  ",
-  " *            .         .#~~~~~~~~~~#  ",
-  "                         '##~~~~~~##   ",
-  "       .                   '######'  * ",
-];
-const planet_7 = [
-  "  .     *           ___   .          *  ",
-  "                  .=   =.               ",
-  "        .    .    = o : =  .            ",
-  "  .               '=___='         *     ",
-];
-const planet_8 = [
-  "    ___   .          *   .            * ",
-  "  .=   =.        *     . .              ",
-  "  = o : =  .                            ",
-  "  '=___='           :      .      *   . ",
-];
-const planet_9 = [
-  "  .                             ___   . ",
-  "               *        :     .=   =.   ",
-  "        .    .                = o : =   ",
-  "                              '=___='   ",
-];
-const planet_10 = [
-  "                              ..,;;,.   ",
-  "    +                      .:llclloooo' ",
-  "                        .:llc::llcoo;ld.",
-  "            .';ccc:cc:clk0ocllc,. :d,:x'",
-  "          'cll:'.      .';lkk;   ;d;,dc ",
-  "        .lo:.              .;oo;ld;,dc. ",
-  "       ,dc.                  .d0o,:d:   ",
-  "      'dc                   .cd:,od'    ",
-  "      lo.      ..          ;dl,:Ok'     ",
-  "     .dc                 ,oo;;oodx'     ",
-  "     .dl               'lo:;lo,.:x'     ",
-  "     .xx.           .'ld:,lo:. .oo.     ",
-  "    ,dxkl.        ,ldo:;lo:.   cx'      ",
-  "   :x:,x0o.    .;oo:,;ld:.   .ld,       ",
-  " .cd,;xc':dc'':ol;;ldo:.   .:oc.        ",
-  " cd,;x:   ,k0dc;cxxc,'.';:ll:.          ",
-  "'x:'xc..;llc;:looolccccc:,.             ",
-  ".xc'llccc::col;.                        ",
-  " ,olccccclc;.                           ",
-  "  .';:;,.                               ",
-];
-const planet_11 = [
-  " +                                        ",
-  "            ___-----___          ()       ",
-  "        _,-'           `-._               ",
-  "      ,'.    --.     ``:::.`.             ",
-  "     /          `.            _    *      ",
-  "    ` `._ ` (`    `-.    ._ __ )          ",
-  '   ;m   ,\'       -##,  ""    " :       . ',
-  "  : #   `        m ww =(   '    :         ",
-  "  | `    (_           `       ` |         ",
-  "  |    .            '           /         ",
-  "  : '   `-.__    .            ) :  .      ",
-  "   `    oO `-'        ::     / ;          ",
-  "   :\\             ,##. '  ' ,' /           ",
-  "    \\              ``   /,-'  /            ",
-  "     ``._    `   __,--'--'_,'         *   ",
-  "         `-____     ___,-v        .       ",
-  "  .       '    -----                      ",
-];
-const planet_12 = [
-  "  *                      .                  ",
-  "  .         .                  *            ",
-  "        o                                   ",
-  "         .              O                   ",
-  "          0     .                           ",
-  "                           .           +    ",
-  " .          \\                              ",
-  "             \\                             ",
-  "              o     .                       ",
-  "     .         \\                           ",
-  "               #\\##\\#      .              ",
-  "             #  #O##\\###                   ",
-  "   .        #*#  #\\##\\###                 ",
-  "            ##*#  #\\##\\##            *    ",
-  "      .      ##*#  #o##\\#                  ",
-  "          .     *#  #\\#     .              ",
-  "                      \\                    ",
-  "                       o                    ",
-  "     ()                 \\                  ",
-  "                         \\                 ",
-  "           .              '         +       ",
-  "                           0                ",
-  "                *           .               ",
-];
+    return resArray;
+  };
+// --- :Create Object.entries For IE11 --- //
+
 //  Получить ширину и высоту необходимого контента
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -1098,7 +971,7 @@ function drawElem(data) {
 }
 
 $(document).ready(function () {
-  const idrag = jQuery.infinitedrag(
+  const dragWall = jQuery.infinitedrag(
     "#wall",
     {},
     {
@@ -1106,13 +979,12 @@ $(document).ready(function () {
       height: height,
       start_col: 0,
       start_row: 0,
-      oncreate: function ($element, col, row) {
-        $element.text(drawStars());
+      oncreate: function (elem, col, row) {
+        elem.text(drawStars());
         for (const [key, value] of Object.entries(elements)) {
-          $element.append(drawElem(value));
+          elem.append(drawElem(value));
         }
       },
     }
   );
 });
-
